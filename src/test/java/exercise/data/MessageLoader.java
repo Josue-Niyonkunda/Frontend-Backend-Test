@@ -34,39 +34,8 @@ public class MessageLoader {
     public static MessageLoader getMessageLoader() {
         return messageLoader;
     }
-    public String firstNameErrorMsg(){
-        return get("firstNameErrorMessage");
-    }
-    public String lastNameErrorMessage(){
-        return get("lastNameErrorMessage");
-    }
-    public String zipCodeErrorMessage(){
-        return get("zipCodeErrorMessage");
 
-    }
-    public String successfulLoginMessage(){
-        return get("successfulLoginMessage");
-    }
-    public String passwordErrorMsg(){
-        return get("passwordErrorMsg");
-    }
-    public String usernameErrorMsg(){
-        return get("usernameErrorMsg");
-    }
-    public String cancelCheckoutMsg(){
-        return get("cancelCheckoutMsg");
-    }
-    public String successfulCheckoutMsg(){
-        return get("successfulCheckoutMsg");
-    }
-    public String checkoutFinishMsg(){
-        return get("checkoutFinishMsg");
-    }
-    public String cancelFinishCheckout(){
-       return get("cancelFinishCheckout");
-    }
-    public String wrongCredentials(){
-      return   get("wrongCredentials");
+
     }
 
 
@@ -77,4 +46,5 @@ public class MessageLoader {
 
 
 
-}
+
+

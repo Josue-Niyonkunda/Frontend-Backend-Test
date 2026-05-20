@@ -1,15 +1,11 @@
-package exercise.tests.login;
+package exercise.tests.restration;
 
 
 
 
 import exercise.base.BaseTest;
-import org.testng.annotations.Test;
 
 
-public class ValidLoginTest extends BaseTest {
-    @Test
-    public static void login(){
+public class ValidRegistrationTest extends BaseTest {
 
-    }
 }

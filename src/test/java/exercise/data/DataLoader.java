@@ -36,29 +36,6 @@ public class DataLoader {
         }
         return value;
     }
-    public String getUserName(){
-        return get("username");
-    }
-    public String getPassword(){
-        return get("password");
-    }
-    public String wrongPassword(){
-        return get("wrongPassword");
-    }
-    public String wrongUsername(){
-        return get("wrongUsername");
-    }
-    public  String getFirstName(){
-        return get("firstName");
-    }
-    public  String getLastName(){
-        return  get("lastName");
-    }
-    public   String getZipCode(){
-        return get("zipCode");
-    }
-    public String getEmptyData(){
-        return get("emptyData");
-    }
+
 
 }

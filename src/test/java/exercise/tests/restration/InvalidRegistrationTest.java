@@ -1,32 +1,11 @@
-package exercise.tests.login;
+package exercise.tests.restration;
 
 
 import exercise.base.BaseTest;
-import org.testng.annotations.Test;
 
-public class InvalidLoginTest extends BaseTest {
-
-
-    @Test
-    public void LoginWithNonUsername(){
+public class InvalidRegistrationTest extends BaseTest {
 
 
 
-    }
-    @Test
-    public void LoginWithNonPassword(){
-
-
-    }
-    @Test
-    public void LoginWithWrongPassword(){
-
-
-    }
-    @Test
-    public void LoginWithNonRegisteredUsername(){
-
-
-    }
 
 }
