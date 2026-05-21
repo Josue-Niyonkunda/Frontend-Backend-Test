@@ -22,6 +22,9 @@ public class HomePage {
     public void clickCreateAccount(){
         page.get().getByText("Create account — free").click();
     }
+    public void clickSignButton(){
+        page.get().getByText("Sign in").click();
+    }
 
 
 
