@@ -37,5 +37,14 @@ public class DataLoader {
         return value;
     }
 
+    public String email(){
+        return get("email");
+    }
+    public String password(){
+        return get("password");
+
+    }
+
+
 
 }

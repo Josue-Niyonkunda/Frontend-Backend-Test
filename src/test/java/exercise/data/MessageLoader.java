@@ -33,6 +33,12 @@ public class MessageLoader {
     public String productsAddedToTheCart(){
         return get("productsAddedToTheCart");
     }
+    public String emailAlreadyCreated(){
+        return get("emailAlreadyCreated");
+    }
+    public String accountCreatedSuccessful(){
+        return get("accountCreatedSuccessful");
+    }
 
     }
 
