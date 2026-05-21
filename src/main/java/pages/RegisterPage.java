@@ -2,9 +2,9 @@ package pages;
 
 import com.microsoft.playwright.Page;
 
-public class AccountPage {
+public class RegisterPage {
     private final ThreadLocal<Page> page;
-    public AccountPage(ThreadLocal<Page> page) {
+    public RegisterPage(ThreadLocal<Page> page) {
         this.page = page;
     }
 public void enterCredentials( String firstName,String lastName,String emailAddress, String password){

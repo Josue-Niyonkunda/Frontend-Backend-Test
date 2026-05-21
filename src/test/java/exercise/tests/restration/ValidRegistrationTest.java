@@ -7,7 +7,7 @@ import exercise.base.BaseTest;
 
 import exercise.data.MessageLoader;
 import org.testng.annotations.Test;
-import pages.AccountPage;
+import pages.RegisterPage;
 import pages.HomePage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -20,11 +20,11 @@ public class ValidRegistrationTest extends BaseTest {
 public void registerUser(){
 
         HomePage homePage=new HomePage(page);
-        AccountPage accountPage=new AccountPage(page);
+        RegisterPage registerPage =new RegisterPage(page);
         MessageLoader msg=MessageLoader.getInstance();
         homePage.clickCreateAccount();
-        accountPage.enterCredentials(firstName(),lastName(),email(),password());
-        accountPage.clickCreateAccountButton();
+        registerPage.enterCredentials(firstName(),lastName(),email(),password());
+        registerPage.clickCreateAccountButton();
 
       assertThat(accountCreationMsg()).hasText(msg.accountCreatedSuccessful());
 

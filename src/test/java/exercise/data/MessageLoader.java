@@ -36,9 +36,16 @@ public class MessageLoader {
     public String emailAlreadyCreated(){
         return get("emailAlreadyCreated");
     }
-    public String accountCreatedSuccessful(){
+    public String accountCreatedSuccessful() {
         return get("accountCreatedSuccessful");
     }
+    public String successfulLoginMsg(){
+        return get("successfulLoginMsg");
+    }
+    public String emptyFieldsValidation(){
+        return get("emptyFieldsValidation");
+    }
+
 
     }
 
