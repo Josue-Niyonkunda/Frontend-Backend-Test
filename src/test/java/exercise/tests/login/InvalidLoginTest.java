@@ -10,7 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
 import static exercise.assertions.Locators.*;
 
 public class InvalidLoginTest extends BaseTest {
@@ -33,11 +33,5 @@ public class InvalidLoginTest extends BaseTest {
         loginPage.fillOutUserCredentials(dataLoader.email(), "");
         assert emptyPasswordValidation().equals(messageLoader.emptyFieldsValidation());
 
-
-
     }
-
-
-
-
 }

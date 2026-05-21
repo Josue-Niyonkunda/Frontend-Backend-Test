@@ -15,6 +15,10 @@ public class LoginPage {
         page.get().locator("[type='submit']").click();
 
     }
+    public void logOut(){
+        page.get().locator(".lucide.lucide-user").hover();
+        page.get().getByText("Sign out").click();
+    }
 
 
 }

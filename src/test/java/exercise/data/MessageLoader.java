@@ -45,7 +45,9 @@ public class MessageLoader {
     public String emptyFieldsValidation(){
         return get("emptyFieldsValidation");
     }
-
+    public String logoutText(){
+        return get("logoutText");
+    }
 
     }
 
