@@ -30,11 +30,9 @@ public class MessageLoader {
         }
         return value;
     }
-
-    public static MessageLoader getMessageLoader() {
-        return messageLoader;
+    public String productsAddedToTheCart(){
+        return get("productsAddedToTheCart");
     }
-
 
     }
 
