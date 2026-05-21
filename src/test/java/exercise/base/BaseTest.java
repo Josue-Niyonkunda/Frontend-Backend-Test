@@ -28,13 +28,13 @@ public class BaseTest {
         page.get().navigate(ConfigLoader.getInstance().getBaseUrl());
     }
 
-    @AfterMethod
-    public void tearDown() {
-        page.get().close();
-        context.get().close();
-        browser.get().close();
-        playwright.get().close();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        page.get().close();
+//        context.get().close();
+//        browser.get().close();
+//        playwright.get().close();
+//    }
 
     public static Page getPage() {
         return page.get();
