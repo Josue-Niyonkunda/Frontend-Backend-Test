@@ -10,7 +10,7 @@ public class BaseTest {
     protected static ThreadLocal<Playwright> playwright = new ThreadLocal<>();
     protected static ThreadLocal<Browser> browser = new ThreadLocal<>();
     protected static ThreadLocal<BrowserContext> context = new ThreadLocal<>();
-    protected static ThreadLocal<Page> page = new ThreadLocal<>();
+    public static ThreadLocal<Page> page = new ThreadLocal<>();
 
     @BeforeMethod
     public void setUp() {
