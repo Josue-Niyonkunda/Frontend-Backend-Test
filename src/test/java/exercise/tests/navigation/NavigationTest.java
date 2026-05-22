@@ -15,8 +15,6 @@ public class NavigationTest extends BaseTest {
     @BeforeMethod
     public void navigateToHomePage(){
         homePage.startShopping();
-
-
     }
     @Test
     public void navigateToHome(){

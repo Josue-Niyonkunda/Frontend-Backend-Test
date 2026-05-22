@@ -1,5 +1,6 @@
 package pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 
@@ -9,9 +10,12 @@ public class CheckoutPage {
     }
 
     private final ThreadLocal<Page>page;
-   public void clickCheckoutButton(){
-       page.get().locator(".btn-primary.text-center.text-sm.py-3").click();
-    }
+   public void clickCheckoutButton() {
+       Locator checkout = page.get().locator("a.btn-primary", new Page.LocatorOptions().setHasText("Checkout"));
+       page.get().waitForTimeout(1500);
+       checkout.waitFor();
+       checkout.click();
+   }
     public void clickBasket(){
        page.get().locator(".lucide.lucide-shopping-bag").first().click();
     }

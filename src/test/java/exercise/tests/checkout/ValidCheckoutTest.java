@@ -3,7 +3,6 @@ package exercise.tests.checkout;
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;
 import exercise.data.MessageLoader;
-import exercise.data.RandomDataGenerator;
 import org.testng.annotations.Test;
 import pages.CheckoutPage;
 import pages.HomePage;
@@ -12,7 +11,6 @@ import pages.ProductsPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static exercise.assertions.Locators.Orderplacedsuccessfully;
-import static exercise.assertions.Locators.productsAddedToCart;
 import static exercise.data.RandomDataGenerator.*;
 
 
@@ -25,7 +23,7 @@ public class ValidCheckoutTest extends BaseTest {
     CheckoutPage checkoutPage=new CheckoutPage(page);
 
     @Test
-    public void successfulCheckoutWithoutAddingAddress(){
+    public void successfulCheckoutWithAddingAddress(){
         homePage.clickSignButton();
         loginPage.fillOutUserCredentials(dataLoader.email(), dataLoader.password());
         homePage.shopNow();
@@ -42,13 +40,7 @@ public class ValidCheckoutTest extends BaseTest {
         checkoutPage.clickReviewOrder();
         checkoutPage.clickPlaceOrder();
         assertThat(Orderplacedsuccessfully()).isVisible();
-        assertThat(Orderplacedsuccessfully()).containsText("Order placed successfully");
-
-
-
-
-
-
+        assertThat(Orderplacedsuccessfully()).containsText(messageLoader.orderPlacedSuccessfully());
     }
 
 

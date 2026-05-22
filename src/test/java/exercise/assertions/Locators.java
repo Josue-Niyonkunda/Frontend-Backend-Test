@@ -28,6 +28,10 @@ public class Locators extends BaseTest {
        ).toString();
 
    }
+   public static String emptyFirstnameValidation(){
+        Locator firstNameField=page.get().locator("[placeholder='First name']");
+        return firstNameField.evaluate("el => el.validationMessage").toString();
+   }
     public static String emptyPasswordValidation(){
         Locator emailField = getPage().locator("[type='password']");
 
@@ -52,6 +56,7 @@ public class Locators extends BaseTest {
        return getPage().locator(".go3958317564");
 
     }
+
 
 }
 

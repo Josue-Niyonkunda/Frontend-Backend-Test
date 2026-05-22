@@ -60,7 +60,9 @@ public class MessageLoader {
     public String featured(){
         return get("featured");
     }
-
+  public String orderPlacedSuccessfully(){
+        return get("orderPlacedSuccessfully");
+  }
     }
 
 
