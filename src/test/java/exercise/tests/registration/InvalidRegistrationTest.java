@@ -1,4 +1,4 @@
-package exercise.tests.restration;
+package exercise.tests.registration;
 
 
 import exercise.base.BaseTest;

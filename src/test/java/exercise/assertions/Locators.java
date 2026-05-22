@@ -8,6 +8,7 @@ import exercise.base.BaseTest;
 public class Locators extends BaseTest {
     public static Locator productsAddedToCart(){
      return    page.get().locator("button.btn-icon.relative");
+
     }
 
     public static  Locator accountCreationMsg(){
@@ -35,5 +36,18 @@ public class Locators extends BaseTest {
         ).toString();
 
     }
+    public static Locator homeValidation(){
+       return getPage().getByText("SUMMER COLLECTION IS LIVE");
+    }
+    public static Locator ShopValidation(){
+        return getPage().getByText("All Products");
+    }
+    public static Locator flashValidation(){
+        return getPage().getByText("Flash Sales").first();
+    }
+    public static Locator featuredValidation(){
+        return getPage().getByText("Featured").nth(1);
+    }
+
 }
 

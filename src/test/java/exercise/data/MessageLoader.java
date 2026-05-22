@@ -48,6 +48,18 @@ public class MessageLoader {
     public String logoutText(){
         return get("logoutText");
     }
+    public String flash(){
+        return get("flash");
+    }
+    public String shop(){
+        return get("shop");
+    }
+    public String home(){
+        return get("home");
+    }
+    public String featured(){
+        return get("featured");
+    }
 
     }
 
