@@ -48,6 +48,10 @@ public class Locators extends BaseTest {
     public static Locator featuredValidation(){
         return getPage().getByText("Featured").nth(1);
     }
+    public static Locator Orderplacedsuccessfully(){
+       return getPage().locator(".go3958317564");
+
+    }
 
 }
 

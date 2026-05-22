@@ -10,15 +10,13 @@ public class CheckoutPage {
 
     private final ThreadLocal<Page>page;
    public void clickCheckoutButton(){
-        page.get().getByRole(AriaRole.LINK,
-                new Page.GetByRoleOptions().setName("Checkout")
-        ).click();
+       page.get().locator(".btn-primary.text-center.text-sm.py-3").click();
     }
     public void clickBasket(){
        page.get().locator(".lucide.lucide-shopping-bag").first().click();
     }
     public void  AddNewAddress(){
-       page.get().getByText(" Add new address").click();
+       page.get().getByText("Add new address").click();
 
     }
     public void fillOutDeliveryAddress(

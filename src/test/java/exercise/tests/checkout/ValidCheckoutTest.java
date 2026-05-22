@@ -11,6 +11,7 @@ import pages.LoginPage;
 import pages.ProductsPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+import static exercise.assertions.Locators.Orderplacedsuccessfully;
 import static exercise.assertions.Locators.productsAddedToCart;
 import static exercise.data.RandomDataGenerator.*;
 
@@ -40,11 +41,13 @@ public class ValidCheckoutTest extends BaseTest {
         checkoutPage.clickPay_when_your_order_arrives();
         checkoutPage.clickReviewOrder();
         checkoutPage.clickPlaceOrder();
+        assertThat(Orderplacedsuccessfully()).isVisible();
+        assertThat(Orderplacedsuccessfully()).containsText("Order placed successfully");
 
 
 
 
-//      assertThat(productsAddedToCart()).hasText(messageLoader.productsAddedToTheCart());
+
 
     }
 
