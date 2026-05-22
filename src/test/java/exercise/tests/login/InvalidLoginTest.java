@@ -10,6 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 
+
 import static exercise.assertions.Locators.*;
 
 public class InvalidLoginTest extends BaseTest {
@@ -32,11 +33,5 @@ public class InvalidLoginTest extends BaseTest {
         loginPage.fillOutUserCredentials(dataLoader.email(), "");
         assert emptyPasswordValidation().equals(messageLoader.emptyFieldsValidation());
 
-
-
     }
-
-
-
-
 }

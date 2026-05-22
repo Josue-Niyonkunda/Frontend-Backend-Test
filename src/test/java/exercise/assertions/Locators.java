@@ -14,6 +14,11 @@ public class Locators extends BaseTest {
 
         return getPage().locator(".go3958317564");
     }
+    public static Locator logoutMsg() {
+        Locator msg = page.get().locator(".font-display.font-semibold.text-lg.text-white");
+        msg.waitFor();
+        return msg;
+    }
    public static String emptyEmailValidation(){
        Locator emailField = getPage().locator("[type='email']");
 
