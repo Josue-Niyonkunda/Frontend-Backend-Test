@@ -6,14 +6,11 @@ package exercise.tests.login;
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;
 import exercise.data.MessageLoader;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.HomePage;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static exercise.assertions.Locators.accountCreationMsg;
-
 
 public class ValidLoginTest extends BaseTest {
 

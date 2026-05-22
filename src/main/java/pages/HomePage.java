@@ -25,9 +25,31 @@ public class HomePage {
     public void clickSignButton(){
         page.get().getByText("Sign in").click();
     }
+    public void clickHome(){
+        page.get().getByRole(AriaRole.LINK,
+                new Page.GetByRoleOptions().setName("Home")
+        ).first().click();
 
 
+    }
+    public void clickFeatured(){
+        page.get().getByRole(AriaRole.LINK,
+                new Page.GetByRoleOptions().setName("Featured")
+        ).first().click();
 
 
+    }
+    public void clickShop(){
+        page.get().getByRole(AriaRole.LINK,
+                new Page.GetByRoleOptions().setName("Shop")
+        ).first().click();
+
+    }
+    public void clickFlash(){
+        page.get().getByRole(AriaRole.LINK,
+                new Page.GetByRoleOptions().setName("Flash")
+        ).first().click();
+
+    }
 
 }
