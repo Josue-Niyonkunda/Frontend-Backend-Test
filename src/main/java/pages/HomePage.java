@@ -19,6 +19,13 @@ public class HomePage {
                 new Page.GetByRoleOptions().setName("Shop Now")
         ).first().click();
     }
+    public void clickCreateAccount(){
+        page.get().getByText("Create account — free").click();
+    }
+    public void clickSignButton(){
+        page.get().getByText("Sign in").click();
+    }
+
 
 
 
