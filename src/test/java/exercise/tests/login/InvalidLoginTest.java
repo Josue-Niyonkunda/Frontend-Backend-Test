@@ -10,7 +10,6 @@ import pages.HomePage;
 import pages.LoginPage;
 
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static exercise.assertions.Locators.*;
 
 public class InvalidLoginTest extends BaseTest {
