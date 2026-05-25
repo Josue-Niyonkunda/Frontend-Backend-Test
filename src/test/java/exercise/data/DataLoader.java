@@ -42,7 +42,9 @@ public class DataLoader {
     }
     public String password(){
         return get("password");
-
+    }
+    public String searchProduct(){
+        return get("searchProduct");
     }
 
 
