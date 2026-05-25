@@ -56,6 +56,9 @@ public class Locators extends BaseTest {
        return getPage().locator(".go3958317564");
 
     }
+    public static Locator searchLocator(){
+      return   getPage().getByText("Results for \"bag\"");
+    }
 
 
 }

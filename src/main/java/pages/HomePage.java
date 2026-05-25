@@ -1,7 +1,10 @@
 package pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+
+import java.sql.DataTruncation;
 
 public class HomePage {
     private final ThreadLocal<Page> page;
@@ -12,6 +15,13 @@ public class HomePage {
         page.get().getByRole(AriaRole.LINK,
                 new Page.GetByRoleOptions().setName("Start Shopping")
         ).click();
+    }
+    public void clickSearch(String product){
+         page.get().locator(".lucide.lucide-search").click();
+        page.get().locator("[placeholder='Search products, brands, categories...']").fill(product);
+
+
+
     }
 
     public  void shopNow(){
