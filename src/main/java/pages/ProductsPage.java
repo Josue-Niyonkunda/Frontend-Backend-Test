@@ -8,9 +8,9 @@ public class ProductsPage {
     public ProductsPage(ThreadLocal<Page> page) {
         this.page = page;
     }
-    public void selectProduct(){
+    public void selectProduct(String productName){
 
-        page.get().getByText("Clear PVC Stadium Tote Bag").click();
+        page.get().getByText(productName).click();
 
     }
     public void selectProductColor(){
@@ -23,6 +23,10 @@ public class ProductsPage {
         page.get().getByRole(AriaRole.BUTTON,
                 new Page.GetByRoleOptions().setName("Add to Cart")
         ).click();
+
+    }
+    public void clickOnLikingIcon(){
+        page.get().locator("button[class='w-14 h-14 rounded-xl border-2 flex items-center justify-center transition-all duration-200 border-brand-border text-brand-text hover:border-brand-red hover:text-brand-red']").click();
 
     }
 
