@@ -46,6 +46,12 @@ public class DataLoader {
     public String searchProduct(){
         return get("searchProduct");
     }
+    public String productName(){
+        return get("productName");
+    }
+    public String wishListItem(){
+        return get("wishListItem");
+    }
 
 
 

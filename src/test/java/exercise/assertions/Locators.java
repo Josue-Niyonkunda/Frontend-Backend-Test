@@ -59,6 +59,9 @@ public class Locators extends BaseTest {
     public static Locator searchLocator(String product) {
         return getPage().getByText("Results for \"" + product + "\"");
     }
+    public static Locator getWishlist(){
+        return  page.get().locator(".btn-icon.relative[href='/wishlist']");
+    }
 
 
 }

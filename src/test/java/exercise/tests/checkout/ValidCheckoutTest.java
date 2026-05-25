@@ -27,7 +27,7 @@ public class ValidCheckoutTest extends BaseTest {
         homePage.clickSignButton();
         loginPage.fillOutUserCredentials(dataLoader.email(), dataLoader.password());
         homePage.shopNow();
-        productsPage.selectProduct();
+        productsPage.selectProduct(dataLoader.productName());
         productsPage.selectProductColor();
         productsPage.addToCart();
         checkoutPage.clickBasket();
