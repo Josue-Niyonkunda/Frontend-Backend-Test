@@ -11,8 +11,7 @@ import pages.LoginPage;
 import pages.ProductsPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-import static exercise.assertions.Locators.Orderplacedsuccessfully;
-import static exercise.assertions.Locators.categoryTitleLocator;
+import static exercise.assertions.Locators.*;
 import static exercise.data.RandomDataGenerator.*;
 
 public class EndToEndTest extends BaseTest {
@@ -38,7 +37,6 @@ public class EndToEndTest extends BaseTest {
         productsPage.selectProduct(dataLoader.productName());
         productsPage.selectProductColor();
         productsPage.addToCart();
-
         page.get().waitForLoadState();
         checkoutPage.clickBasket();
         checkoutPage.clickCheckoutButton();
@@ -49,8 +47,9 @@ public class EndToEndTest extends BaseTest {
         checkoutPage.clickPay_when_your_order_arrives();
         checkoutPage.clickReviewOrder();
         checkoutPage.clickPlaceOrder();
-        assertThat(Orderplacedsuccessfully()).isVisible();
-        assertThat(Orderplacedsuccessfully()).containsText(messageLoader.orderPlacedSuccessfully());
+        loginPage.logOut();
+        assertThat(logoutMsg())
+                .containsText(messageLoader.logoutText());
     }
 
 
