@@ -52,7 +52,17 @@ public class DataLoader {
     public String wishListItem(){
         return get("wishListItem");
     }
-
-
+    public String categoryName(){
+        return get("categoryName");
+    }
+ public String min(){
+       return get("min");
+ }
+ public String max(){
+        return get("max");
+ }
+ public String size(){
+        return get("size");
+ }
 
 }
