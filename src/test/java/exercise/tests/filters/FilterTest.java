@@ -12,8 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-import static exercise.assertions.Locators.categoryTitleLocator;
-import static exercise.assertions.Locators.productPrices;
+import static exercise.assertions.Locators.*;
 
 public class FilterTest extends BaseTest {
     HomePage homePage=new HomePage(page);
@@ -60,5 +59,6 @@ public class FilterTest extends BaseTest {
         homePage.startShopping();
         homePage.clickShop();
         productsPage.selectBySize(dataLoader.size());
+        assertThat(sizeLocator()).isVisible();
     }
 }

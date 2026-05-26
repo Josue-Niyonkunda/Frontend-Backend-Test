@@ -95,5 +95,8 @@ public static List<String> productPrices() {
 
     return prices;
 }
+public static Locator sizeLocator(){
+        return page.get().getByText("size: XS");
+}
 }
 
