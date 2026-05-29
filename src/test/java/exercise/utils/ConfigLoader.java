@@ -31,7 +31,9 @@ public class ConfigLoader {
    public String getBaseUrl(){
         return get("frontendBaseUrl");
    }
-
+    public String backendBaseUrl(){
+        return get("backendBaseUrl");
+    }
 
 
 }

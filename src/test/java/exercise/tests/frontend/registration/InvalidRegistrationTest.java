@@ -1,4 +1,4 @@
-package exercise.tests.registration;
+package exercise.tests.frontend.registration;
 
 
 import exercise.base.BaseTest;

@@ -1,4 +1,4 @@
-package exercise.tests.deliveryAddress;
+package exercise.tests.frontend.deliveryAddress;
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;

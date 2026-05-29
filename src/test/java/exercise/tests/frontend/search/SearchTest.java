@@ -1,4 +1,4 @@
-package exercise.tests.search;
+package exercise.tests.frontend.search;
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;

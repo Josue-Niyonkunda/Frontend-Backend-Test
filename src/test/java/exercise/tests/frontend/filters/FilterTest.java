@@ -1,4 +1,4 @@
-package exercise.tests.filters;
+package exercise.tests.frontend.filters;
 
 import exercise.assertions.Locators;
 import exercise.base.BaseTest;

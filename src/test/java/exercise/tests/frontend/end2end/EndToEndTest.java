@@ -1,4 +1,5 @@
-package exercise.tests.checkout;
+package exercise.tests.frontend.end2end;
+
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;
@@ -10,26 +11,33 @@ import pages.LoginPage;
 import pages.ProductsPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-import static exercise.assertions.Locators.Orderplacedsuccessfully;
+import static exercise.assertions.Locators.*;
 import static exercise.data.RandomDataGenerator.*;
 
-
-public class ValidCheckoutTest extends BaseTest {
+public class EndToEndTest extends BaseTest {
     HomePage homePage=new HomePage(page);
     ProductsPage productsPage=new ProductsPage(page);
-    MessageLoader messageLoader=MessageLoader.getInstance();
     LoginPage loginPage=new LoginPage(page);
-    DataLoader dataLoader=DataLoader.getInstance();
     CheckoutPage checkoutPage=new CheckoutPage(page);
-
+    DataLoader dataLoader=DataLoader.getInstance();
+    MessageLoader messageLoader=MessageLoader.getInstance();
     @Test
-    public void successfulCheckoutWithAddingAddress(){
+    public void end2end(){
+        homePage.startShopping();
         homePage.clickSignButton();
         loginPage.fillOutUserCredentials(dataLoader.email(), dataLoader.password());
         homePage.shopNow();
+
+        productsPage.selectCategories(dataLoader.categoryName());
+        assertThat(categoryTitleLocator(dataLoader.categoryName())).isVisible();
+        productsPage.selectPriceRange(
+                dataLoader.min(),
+                dataLoader.max()
+        );
         productsPage.selectProduct(dataLoader.productName());
         productsPage.selectProductColor();
         productsPage.addToCart();
+        page.get().waitForLoadState();
         checkoutPage.clickBasket();
         checkoutPage.clickCheckoutButton();
         checkoutPage.AddNewAddress();
@@ -39,8 +47,9 @@ public class ValidCheckoutTest extends BaseTest {
         checkoutPage.clickPay_when_your_order_arrives();
         checkoutPage.clickReviewOrder();
         checkoutPage.clickPlaceOrder();
-        assertThat(Orderplacedsuccessfully()).isVisible();
-        assertThat(Orderplacedsuccessfully()).containsText(messageLoader.orderPlacedSuccessfully());
+        loginPage.logOut();
+        assertThat(logoutMsg())
+                .containsText(messageLoader.logoutText());
     }
 
 

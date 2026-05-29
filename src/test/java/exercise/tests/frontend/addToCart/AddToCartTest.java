@@ -1,4 +1,4 @@
-package exercise.tests.addToCart;
+package exercise.tests.frontend.addToCart;
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;
@@ -6,8 +6,6 @@ import exercise.data.MessageLoader;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.ProductsPage;
-
-import javax.xml.crypto.Data;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static exercise.assertions.Locators.productsAddedToCart;
