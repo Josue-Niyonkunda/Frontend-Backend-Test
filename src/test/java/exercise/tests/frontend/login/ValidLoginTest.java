@@ -1,4 +1,4 @@
-package exercise.tests.login;
+package exercise.tests.frontend.login;
 
 
 

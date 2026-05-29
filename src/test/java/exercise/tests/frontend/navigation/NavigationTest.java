@@ -1,4 +1,4 @@
-package exercise.tests.navigation;
+package exercise.tests.frontend.navigation;
 
 import exercise.base.BaseTest;
 import exercise.data.MessageLoader;

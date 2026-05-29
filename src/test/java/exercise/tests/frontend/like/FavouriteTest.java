@@ -1,4 +1,4 @@
-package exercise.tests.like;
+package exercise.tests.frontend.like;
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;

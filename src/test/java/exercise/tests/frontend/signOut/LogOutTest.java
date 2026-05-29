@@ -1,4 +1,4 @@
-package exercise.tests.signOut;
+package exercise.tests.frontend.signOut;
 
 import exercise.base.BaseTest;
 import exercise.data.DataLoader;
